@@ -13,6 +13,13 @@ export default class Cart {
         return [...this._items]; 
     }
 
+    countSum(): number {
+        return this._items.reduce((sum, item) => sum + item.price * item.count, 0);
+      }
+    
+      countSumDiscount(discount: number): number {
+        return this.countSum() * (1 - discount / 100);
+      }
 
     removeCart(id: number): void {
         this._items = this._items.filter((item: Buyable) => item.id !== id);

@@ -23,6 +23,6 @@ test("add card", () => {
       ['fantasy', 'gunman', 'advanture'],
       "137 min / 02:17",
       "Marvel")
-  
-    expect(cart.items.length).toBe(3); 
-  );
+  )
+  expect(cart.items.length).toBe(3); 
+});
